@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA EVENTS - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">AURA<span>EVENTS</span></a>
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="login.html" class="btn btn-ghost">Login</a>
+      </nav>
+      <button class="nav-toggle" aria-label="open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Welcome to Aura Events</h1>
+          <p>From weddings to corporate events — we bring your vision to life with elegance and precision.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="#services">Explore Services</a>
+            <a class="btn btn-outline" href="login.html">Login</a>
+          </div>
+          <ul class="trust">
+            <li>✅ Role-based secure accounts</li>
+            <li>✅ Transparent pricing & booking</li>
+            <li>✅ Trusted vendors & reviews</li>
+          </ul>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1000&auto=format&fit=crop"
+                 alt="Event setup" />
+          </div>
+          <div class="card-body">
+            <h3>Featured: Wedding Essentials</h3>
+            <p>Decor + Photography + Makeup — curated packages starting from ₹25,000.</p>
+            <a class="btn btn-small" href="#book">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Choose from our curated categories — flexible packages and custom quotes.</p>
+      <div class="grid cards">
+        <article class="card"><div class="card-icon">🌸</div><h4>Decoration</h4><p>Flower arrangements, balloon art, lighting & thematic decor.</p></article>
+        <article class="card"><div class="card-icon">📸</div><h4>Photography</h4><p>Photo, video, and combo packages with professional editors.</p></article>
+        <article class="card"><div class="card-icon">🍽️</div><h4>Catering</h4><p>Veg, non-veg, mixed menus and tiffin services for every crowd.</p></article>
+        <article class="card"><div class="card-icon">🎵</div><h4>Entertainment</h4><p>DJ, live bands, sangeet & cultural performances.</p></article>
+        <article class="card"><div class="card-icon">💄</div><h4>Makeup & Styling</h4><p>Bridal, groom, hairstyle and saree draping specialists.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">AURA<span>EVENTS</span></a>
+        <p>Where every event becomes an unforgettable experience ✨</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#book">Book</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="social">
+        <small>© <span id="year"></span> Aura Events</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>

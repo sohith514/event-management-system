@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA EVENTS - Book Now</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">AURA<span>EVENTS</span></a>
+      <nav class="nav">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#how-it-works">How it Works</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="login.html" class="btn btn-ghost">Login</a>
+      </nav>
+      <button class="nav-toggle" aria-label="open menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Book Your Event</h1>
+        <p>Fill out the form below and we’ll get back to you with a custom quote.</p>
+
+        <form class="form" onsubmit="alert('Booking request sent — demo only'); return false;">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+          </div>
+          <div class="form-row">
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <select name="service" required>
+              <option value="">Choose Service</option>
+              <option>Decoration</option>
+              <option>Photography</option>
+              <option>Catering</option>
+              <option>Entertainment</option>
+              <option>Makeup & Styling</option>
+            </select>
+          </div>
+          <textarea name="details" rows="4" placeholder="Event Details (date, location, guests)"></textarea>
+          <div class="form-actions">
+            <button class="btn" type="submit">Submit Booking</button>
+            <a class="btn btn-outline" href="mailto:hello@auraevents.example">Email Us</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">AURA<span>EVENTS</span></a>
+        <p>Where every event becomes an unforgettable experience ✨</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html#services">Services</a>
+        <a href="book.html">Book</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <div class="social">
+        <small>© <span id="year"></span> Aura Events</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
