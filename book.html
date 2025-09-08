@@ -27,7 +27,7 @@
         <h1>Book Your Event</h1>
         <p>Fill out the form below and we’ll get back to you with a custom quote.</p>
 
-        <form class="form" onsubmit="alert('Booking request sent — demo only'); return false;">
+        <form class="form booking-form">
           <div class="form-row">
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Email Address" required />
@@ -71,11 +71,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
+  <!-- Shared JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
