@@ -1,0 +1,52 @@
+// script.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Footer year auto-update
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // Nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  }
+
+  // Handle login form
+  const loginForm = document.querySelector("form.login-form");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = loginForm.querySelector("input[type='email']").value;
+      const password = loginForm.querySelector("input[type='password']").value;
+
+      if (email && password) {
+        alert(`Welcome, ${email}!\n(Demo login — no backend connected)`);
+        window.location.href = "index.html";
+      } else {
+        alert("Please fill in all fields.");
+      }
+    });
+  }
+
+  // Handle booking form
+  const bookingForm = document.querySelector("form.booking-form");
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = bookingForm.querySelector("input[name='name']").value;
+      const service = bookingForm.querySelector("select[name='service']").value;
+
+      if (name && service) {
+        alert(`Booking request submitted!\nName: ${name}\nService: ${service}\n(Demo only)`);
+        bookingForm.reset();
+      } else {
+        alert("Please fill in required fields.");
+      }
+    });
+  }
+});
