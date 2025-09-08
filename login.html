@@ -26,7 +26,7 @@
       <div class="hero-content">
         <h1>Login to Your Account</h1>
         <p>Access your bookings, manage events, and more.</p>
-        <form class="form" onsubmit="alert('Demo login — no backend connected'); return false;">
+        <form class="form login-form">
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
           <button class="btn" type="submit">Login</button>
@@ -44,7 +44,7 @@
       </div>
       <nav class="footer-nav">
         <a href="index.html#services">Services</a>
-        <a href="index.html#book">Book</a>
+        <a href="book.html">Book</a>
         <a href="index.html#testimonials">Testimonials</a>
         <a href="login.html">Login</a>
       </nav>
@@ -54,11 +54,7 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
-  </script>
+  <!-- Shared JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
